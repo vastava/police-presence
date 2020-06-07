@@ -305,7 +305,7 @@ var corr_matrix_svg = d3.select("#corr_matrix")
   }
 
 //Read the data
-d3.csv("/data/race_comparison_trimmed.csv", function(data) {
+d3.csv("https://raw.githubusercontent.com/vastava/police-presence/master/data/race_comparison_trimmed.csv", function(data) {
 
   data = data.map(function(d) {
       // console.log(d)
@@ -1014,7 +1014,7 @@ mae_multi = d3.mean(data, function(d) { return Math.abs(+d.multi_resid); })
 
 })
 
-d3.csv("/data/correlation.csv", function(error, rows) {
+d3.csv("https://raw.githubusercontent.com/vastava/police-presence/master/data/correlation.csv", function(error, rows) {
 
   // Going from wide to long format
   var data = [];
